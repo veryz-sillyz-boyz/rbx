@@ -13,7 +13,6 @@ Library.ToggleSettings.DisabledText = "NO"
 Library.ToggleSettings.EnabledColor = Color3.fromRGB(94, 255, 35)
 Library.ToggleSettings.DisabledColor = Color3.fromRGB(255, 41, 41)
 
-
 local TweenService = game:GetService("TweenService")
 
 function CreateCheatTemplate(Text, HoverGlow)
@@ -172,6 +171,7 @@ function Library.new()
 		do
 			local Title = Instance.new("TextLabel")
 			local Content = Instance.new("Frame")
+			local Line = Instance.new("Frame")
 			local UIListLayout = Instance.new("UIListLayout")
 
 			LibraryCategory.Frame.Name = Name
@@ -213,6 +213,14 @@ function Library.new()
 			Content.Position = UDim2.new(0, 0, 0, 32)
 			Content.Size = UDim2.new(1, 0, 1, -32)
 			Content.ClipsDescendants = true
+			
+			Line.Name = "Line"
+			Line.Parent = LibraryCategory.Frame
+			Line.AnchorPoint = Vector2.new(0, 1)
+			Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Line.BorderSizePixel = 0
+			Line.Position = UDim2.new(0, 0, 0, 30)
+			Line.Size = UDim2.new(1, 0, 0, 1)
 
 			UIListLayout.Parent = Content
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
