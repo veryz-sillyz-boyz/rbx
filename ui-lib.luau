@@ -1,7 +1,7 @@
 local Library = {}
 
 Library.Font = Enum.Font.Arial
-Library.Name = "Library"
+Library.Name = "nouks ui"
 
 Library.CheatSettings = {}
 Library.CheatSettings.EnabledColor = Color3.fromRGB(94, 255, 35)
@@ -171,7 +171,6 @@ function Library.new()
 
 		do
 			local Title = Instance.new("TextLabel")
-			local Line = Instance.new("Frame")
 			local Content = Instance.new("Frame")
 			local UIListLayout = Instance.new("UIListLayout")
 
@@ -206,14 +205,6 @@ function Library.new()
 			Minimize.Text = "-"
 			Minimize.TextColor3 = Color3.fromRGB(255, 243, 243)
 			Minimize.TextSize = 14
-
-			Line.Name = "Line"
-			Line.Parent = LibraryCategory.Frame
-			Line.AnchorPoint = Vector2.new(0, 1)
-			Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			Line.BorderSizePixel = 0
-			Line.Position = UDim2.new(0, 0, 0, 30)
-			Line.Size = UDim2.new(1, 0, 0, 1)
 
 			Content.Name = "Content"
 			Content.Parent = LibraryCategory.Frame
